@@ -177,22 +177,22 @@
 
 .pricing-card:hover,
 .pricing-card-full:hover {
-  box-shadow: 0 8px 32px rgba(39, 171, 131, 0.12),
-              0 0 0 1px rgba(39, 171, 131, 0.1);
-  border-color: rgba(39, 171, 131, 0.25);
-  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(39, 171, 131, 0.08),
+              0 0 0 1px rgba(39, 171, 131, 0.08);
+  border-color: rgba(39, 171, 131, 0.15);
+  transform: translateY(-2px);
 }
 
 /* Don't override the featured card's existing glow */
 .pricing-card--featured:hover,
 .pricing-card-full--featured:hover {
-  box-shadow: 0 0 0 2px var(--teal-400),
-              0 12px 40px rgba(39, 171, 131, 0.2);
+  box-shadow: 0 0 0 1.5px var(--teal-400),
+              0 8px 24px rgba(39, 171, 131, 0.12);
 }
 
 .mockup-card:hover {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
 }
 
 /* Card inner glow effect on hover - CSS-only spotlight */
@@ -383,7 +383,7 @@
   top: -1px;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 40px;
   background: linear-gradient(
     to bottom,
     var(--color-bg) 0%,
@@ -414,7 +414,7 @@
   top: -1px;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 40px;
   background: linear-gradient(
     to bottom,
     var(--color-surface-dark) 0%,
@@ -435,7 +435,7 @@
   top: -1px;
   left: 0;
   right: 0;
-  height: 48px;
+  height: 24px;
   background: linear-gradient(
     to bottom,
     var(--color-bg) 0%,
@@ -456,7 +456,7 @@
   top: -1px;
   left: 0;
   right: 0;
-  height: 48px;
+  height: 24px;
   background: linear-gradient(
     to bottom,
     var(--color-surface) 0%,
