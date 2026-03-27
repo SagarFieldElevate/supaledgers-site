@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon — SupaLedgers</title>
+<meta name="description" content="This page is under development. SupaLedgers is currently in beta.">
+
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<a href="#main" class="sr-only" style="position:fixed;top:var(--space-2);left:var(--space-2);z-index:999;padding:var(--space-2) var(--space-4);background:var(--color-accent);color:white;border-radius:var(--radius-md);">Skip to content</a>
+
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="./index.html" class="nav__logo" aria-label="SupaLedgers Home"><svg width="32" height="32" viewBox="0 0 64 64" fill="none"><polygon points="32,4 58,18 32,32 6,18" fill="#3ebd93"/><polygon points="6,18 32,32 32,36 6,22" fill="#163d55"/><polygon points="6,22 32,36 32,42 6,28" fill="#27ab83"/><polygon points="6,28 32,42 32,58 6,44" fill="#0f2537"/><polygon points="58,18 32,32 32,42 58,28" fill="#1a4562"/><polygon points="58,28 32,42 32,48 58,34" fill="#3ebd93"/><polygon points="58,34 32,48 32,58 58,44" fill="#163d55"/></svg><span>SupaLedgers</span></a>
+    <ul class="nav__links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./features.html">Features</a></li>
+      <li><a href="./pricing.html">Pricing</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./contact.html" class="nav__cta">Join Beta</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="nav__mobile" id="mobileNav">
+  <div class="nav__mobile-header">
+    <a href="./index.html" class="nav__logo"><svg width="32" height="32" viewBox="0 0 64 64" fill="none"><polygon points="32,4 58,18 32,32 6,18" fill="#3ebd93"/><polygon points="6,18 32,32 32,36 6,22" fill="#163d55"/><polygon points="6,22 32,36 32,42 6,28" fill="#27ab83"/><polygon points="6,28 32,42 32,58 6,44" fill="#0f2537"/><polygon points="58,18 32,32 32,42 58,28" fill="#1a4562"/><polygon points="58,28 32,42 32,48 58,34" fill="#3ebd93"/><polygon points="58,34 32,48 32,58 58,44" fill="#163d55"/></svg><span>SupaLedgers</span></a>
+    <button class="nav__mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+  </div>
+  <ul class="nav__mobile-links"><li><a href="./index.html">Home</a></li><li><a href="./features.html">Features</a></li><li><a href="./pricing.html">Pricing</a></li><li><a href="./about.html">About</a></li><li><a href="./contact.html">Contact</a></li></ul>
+  <a href="./contact.html" class="btn btn--primary btn--large mt-8" style="width:100%;">Join Beta</a>
+</div>
+
+<main id="main">
+
+<section class="section section--dark" style="padding-top:var(--space-20);padding-bottom:var(--space-20);min-height:60vh;display:flex;align-items:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 40%,rgba(39,171,131,0.06),transparent);"></div>
+  <div class="container container--narrow text-center" style="position:relative;">
+    <div style="display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:var(--radius-full);background:rgba(39,171,131,0.1);border:1px solid rgba(39,171,131,0.2);margin-bottom:var(--space-6);">
+      <i data-lucide="hard-hat" style="width:32px;height:32px;color:var(--teal-400);"></i>
+    </div>
+    <h1 style="font-size:var(--text-2xl);color:var(--white);font-weight:800;">Under Development</h1>
+    <p class="mt-4" style="color:var(--navy-300);font-size:var(--text-lg);max-width:45ch;margin-inline:auto;">We're building this page right now. SupaLedgers is currently in beta — things are moving fast.</p>
+    <div class="mt-8" style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
+      <a href="./index.html" class="btn btn--outline-light btn--large">
+        <i data-lucide="arrow-left" style="width:18px;height:18px;"></i>
+        Back to Home
+      </a>
+      <a href="./contact.html" class="btn btn--primary btn--large">
+        Join the Waitlist
+        <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+      </a>
+    </div>
+    <p class="mt-8" style="color:var(--navy-400);font-size:var(--text-sm);">Want to know when this goes live? <a href="mailto:teams@fieldelevate.com" style="color:var(--teal-400);">Email us</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__bottom" style="border-top:none;">
+    <span>&copy; 2026 SupaLedgers. All rights reserved.</span>
+    <div class="footer__built-by">Built by <a href="https://fieldelevate.com" target="_blank" rel="noopener noreferrer" style="color:var(--teal-300);">Field Elevate</a></div>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+  document.getElementById('hamburger')?.addEventListener('click', () => { const m = document.getElementById('mobileNav'); m.style.display='flex'; requestAnimationFrame(() => m.classList.add('open')); });
+  document.getElementById('mobileClose')?.addEventListener('click', () => { const m = document.getElementById('mobileNav'); m.classList.remove('open'); setTimeout(() => m.style.display='none', 300); });
+  window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav--scrolled', window.scrollY > 40), { passive: true });
+</script>
+</body>
+</html>
