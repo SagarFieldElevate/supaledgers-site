@@ -1,0 +1,39 @@
+<svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="top-face" x1="16" y1="4" x2="48" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4fd1a5"/>
+      <stop offset="1" stop-color="#27ab83"/>
+    </linearGradient>
+    <linearGradient id="left-face" x1="4" y1="20" x2="32" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#163d55"/>
+      <stop offset="1" stop-color="#0c1f33"/>
+    </linearGradient>
+    <linearGradient id="right-face" x1="32" y1="20" x2="60" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1e4f6d"/>
+      <stop offset="1" stop-color="#122d45"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Top face of cube -->
+  <polygon points="32,4 58,18 32,32 6,18" fill="url(#top-face)"/>
+  
+  <!-- Left face - split into top and bottom sections with S gap -->
+  <!-- Left face top portion -->
+  <polygon points="6,18 32,32 32,36 6,22" fill="#163d55"/>
+  <!-- Left S-chevron notch (teal stripe cutting left) -->
+  <polygon points="6,22 32,36 32,42 6,28" fill="#27ab83"/>
+  <!-- Left face bottom portion -->
+  <polygon points="6,28 32,42 32,58 6,44" fill="url(#left-face)"/>
+  
+  <!-- Right face - split with S gap -->
+  <!-- Right face top portion -->
+  <polygon points="58,18 32,32 32,42 58,28" fill="url(#right-face)"/>
+  <!-- Right S-chevron notch (teal stripe cutting right) -->
+  <polygon points="58,28 32,42 32,48 58,34" fill="#3ebd93"/>
+  <!-- Right face bottom portion -->
+  <polygon points="58,34 32,48 32,58 58,44" fill="#163d55"/>
+  
+  <!-- Subtle edge highlight on top -->
+  <line x1="32" y1="4" x2="58" y2="18" stroke="#6ee7b7" stroke-width="0.5" opacity="0.4"/>
+  <line x1="32" y1="4" x2="6" y2="18" stroke="#6ee7b7" stroke-width="0.5" opacity="0.3"/>
+</svg>
