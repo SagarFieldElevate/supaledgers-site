@@ -10,6 +10,7 @@
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./motion.css">
 </head>
 <body>
 
@@ -73,5 +74,6 @@
   document.getElementById('mobileClose')?.addEventListener('click', () => { const m = document.getElementById('mobileNav'); m.classList.remove('open'); setTimeout(() => m.style.display='none', 300); });
   window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav--scrolled', window.scrollY > 40), { passive: true });
 </script>
+<script src="./motion.js"></script>
 </body>
 </html>

@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="./features.css">
+<link rel="stylesheet" href="./motion.css">
 </head>
 <body>
 
@@ -237,7 +238,8 @@
 
 <!-- AI ASSISTANT -->
 <section class="section section--dark feature-section" id="ai">
-  <div class="container">
+  <div class="dot-grid-bg"></div>
+  <div class="container" style="position:relative;z-index:1;">
     <div class="feature-row feature-row--reverse">
       <div class="feature-text js-reveal">
         <span class="label label--light mb-4"><i data-lucide="mic" style="width:14px;height:14px;"></i> AI Assistant</span>
@@ -366,7 +368,8 @@
 
 <!-- CTA -->
 <section class="section section--dark">
-  <div class="container container--narrow text-center">
+  <div class="dot-grid-bg"></div>
+  <div class="container container--narrow text-center" style="position:relative;z-index:1;">
     <div class="js-reveal">
       <h2 style="font-size:var(--text-2xl);color:var(--white);">Ready to simplify your business?</h2>
       <p class="mt-4" style="color:var(--navy-300);max-width:45ch;margin-inline:auto;">Join the beta waitlist. Free access to the full platform. Limited spots.</p>
@@ -408,5 +411,6 @@
   const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.js-reveal, .stagger').forEach(el => observer.observe(el));
 </script>
+<script src="./motion.js"></script>
 </body>
 </html>

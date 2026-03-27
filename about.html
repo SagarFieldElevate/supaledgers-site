@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="./about.css">
+<link rel="stylesheet" href="./motion.css">
 </head>
 <body>
 
@@ -139,8 +140,9 @@
 </section>
 
 <!-- CTA -->
-<section class="section section--dark">
-  <div class="container container--narrow text-center">
+<section class="section section--dark" style="position:relative;overflow:hidden;">
+  <div class="dot-grid-bg"></div>
+  <div class="container container--narrow text-center" style="position:relative;z-index:1;">
     <div class="js-reveal">
       <h2 style="font-size:var(--text-2xl);color:var(--white);">Ready to see what one platform can do?</h2>
       <p class="mt-4" style="color:var(--navy-300);max-width:40ch;margin-inline:auto;">Join the beta and get free access to the full platform.</p>
@@ -176,5 +178,6 @@
   const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.js-reveal, .stagger').forEach(el => observer.observe(el));
 </script>
+<script src="./motion.js"></script>
 </body>
 </html>

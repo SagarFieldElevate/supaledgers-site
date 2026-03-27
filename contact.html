@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="./contact.css">
+<link rel="stylesheet" href="./motion.css">
 </head>
 <body>
 
@@ -212,7 +213,9 @@
   window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav--scrolled', window.scrollY > 40), { passive: true });
   const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.js-reveal, .stagger').forEach(el => observer.observe(el));
-
+</script>
+<script src="./motion.js"></script>
+<script>
   // Waitlist form submission
   // REPLACE THIS URL with your Google Apps Script deployment URL
   const FORM_ENDPOINT = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
