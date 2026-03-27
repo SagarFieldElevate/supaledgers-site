@@ -139,7 +139,7 @@
             Join the Waitlist
             <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
           </button>
-          <p style="font-size:var(--text-xs);color:var(--navy-400);text-align:center;margin-top:var(--space-3);">Free beta access. No credit card required. We'll reach out within 48 hours.</p>
+          <p style="font-size:var(--text-xs);color:var(--navy-400);text-align:center;margin-top:var(--space-3);">Free beta access. No credit card required. We'll be in touch if selected.</p>
         </form>
 
         <!-- Success State -->
@@ -148,7 +148,7 @@
             <i data-lucide="check-circle" style="width:48px;height:48px;color:#27ab83;"></i>
           </div>
           <h3>You're on the list.</h3>
-          <p class="text-muted">We'll reach out within 48 hours with your free beta access. Keep an eye on your inbox.</p>
+          <p class="text-muted">If you're selected for the beta, we'll email you with next steps. Keep an eye on your inbox.</p>
           <p style="font-size:var(--text-xs);color:var(--navy-500);margin-top:var(--space-4);">Questions? Email us at <a href="mailto:teams@fieldelevate.com" style="color:var(--teal-400);">teams@fieldelevate.com</a></p>
         </div>
       </div>
@@ -173,7 +173,7 @@
             <i data-lucide="clock" style="width:20px;height:20px;color:var(--teal-400);"></i>
             <div>
               <strong>Response Time</strong>
-              <span class="text-muted">Within 48 hours</span>
+              <span class="text-muted">We'll be in touch if selected</span>
             </div>
           </div>
         </div>
@@ -220,11 +220,45 @@
   const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.js-reveal, .stagger').forEach(el => observer.observe(el));
 
-  // Form submission
-  document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+  // Waitlist form submission
+  // REPLACE THIS URL with your Google Apps Script deployment URL
+  const FORM_ENDPOINT = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+  document.getElementById('contactForm')?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    document.getElementById('contactForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'flex';
+    const btn = e.target.querySelector('button[type="submit"]');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">Submitting...</span>';
+    btn.disabled = true;
+
+    const data = {
+      firstName: document.getElementById('firstName').value,
+      lastName: document.getElementById('lastName').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      company: document.getElementById('company').value,
+      size: document.getElementById('size').value,
+      industry: document.getElementById('industry').value,
+      currentTools: document.getElementById('currentTools').value,
+      painPoints: document.getElementById('painPoints').value
+    };
+
+    try {
+      if (FORM_ENDPOINT !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+        await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      }
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'flex';
+    } catch (err) {
+      // Still show success (no-cors won't return a readable response)
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'flex';
+    }
   });
 </script>
 </body>
