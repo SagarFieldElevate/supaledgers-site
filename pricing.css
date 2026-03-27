@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
-  align-items: start;
+  align-items: stretch;
   margin-top: calc(-1 * var(--space-16));
   position: relative;
   z-index: 10;
@@ -19,6 +19,12 @@
   padding: var(--space-8) var(--space-6);
   position: relative;
   box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card-full__features {
+  flex: 1;
 }
 
 .pricing-card-full--featured {

@@ -619,7 +619,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
-  align-items: start;
+  align-items: stretch;
 }
 
 .pricing-card {
@@ -628,6 +628,12 @@
   border-radius: var(--radius-xl);
   padding: var(--space-8) var(--space-6);
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card__features {
+  flex: 1;
 }
 
 .pricing-card--featured {
