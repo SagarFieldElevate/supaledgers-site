@@ -1,6 +1,11 @@
 /* ============================================
-   CONTACT PAGE
+   CONTACT / WAITLIST PAGE
    ============================================ */
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
 
 .contact-grid {
   display: grid;
